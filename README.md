@@ -7,3 +7,16 @@ The first line contains a positive integer t, the number of test cases (1 ≤ t 
 
 ## Output
 For each test case in order output the number of i, 0 ≤ i ≤ n, such that c ≤ a*(x+i) + b (mod m) ≤ d in that test case, followed by a newline.
+
+## Example
+
+```
+Input:
+2
+2 3 1 3 0 1 7
+1 0 0 8 0 8 9
+
+Output:
+1
+9
+```
