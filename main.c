@@ -2,9 +2,9 @@
 
 int main(void)
 {
-    int t, indice, i, result, counter = 0;
+    unsigned long int t, indice, i, result, counter = 0;
     scanf("%d", &t);
-    int a, b, x, n, c, d, m;
+    unsigned long int a, b, x, n, c, d, m;
     for (indice = 0; indice < t; indice++)
     {
         scanf("%d %d %d %d %d %d %d", &a, &b, &x, &n, &c, &d, &m);
