@@ -3,20 +3,27 @@
 int main(void)
 {
     unsigned long int t, indice, i, result, counter = 0;
-    scanf("%d", &t);
-    unsigned long int a, b, x, n, c, d, m;
+    scanf("%lu", &t);
+    unsigned long int a, b, x, n, c, d, m, partial = 0;
     for (indice = 0; indice < t; indice++)
     {
-        scanf("%d %d %d %d %d %d %d", &a, &b, &x, &n, &c, &d, &m);
-        for (i = 0; i <= n; i++)
+        scanf("%lu %lu %lu %lu %lu %lu %lu", &a, &b, &x, &n, &c, &d, &m);
+        partial = a * x + b;
+        result = partial % m;
+        if (result >= c && result <= d)
+            counter++;
+        for (i = 1; i <= n; i++)
         {
-            result = (a * (x + i) + b) % m;
+            partial = partial + a;
+            if (partial < m)
+                result = result + a;
+            else
+                result = partial % m;
             if (result >= c && result <= d)
                 counter++;
         }
-        printf("%d\n", counter);
+        printf("%lu\n", counter);
         counter = 0;
     }
-
     return 0;
 }
