@@ -9,8 +9,8 @@ int main(void)
     for (indice = 0; indice < t; indice++)
     {
         scanf("%llu %llu %llu %llu %llu %llu %llu", &a, &b, &x, &n, &c, &d, &m);
-        mInN = m / n;
-        newN = m % n;
+        mInN = n / m;
+        newN = n % m;
         partial = a * x + b;
         result = partial % m;
         if (result >= c && result <= d)
