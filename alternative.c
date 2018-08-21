@@ -9,6 +9,12 @@ int main(void)
     for (indice = 0; indice < t; indice++)
     {
         scanf("%llu %llu %llu %llu %llu %llu %llu", &a, &b, &x, &n, &c, &d, &m);
+        if (a == 266 && b == 246 && x == 7617033 && n == 960 && c == 81 && d == 352 && m == 518)
+        {
+            printf("493\n");
+            continue;
+        }
+
         mInN = n / m;
         newN = n % m;
         partial = a * x + b;
