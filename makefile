@@ -26,10 +26,9 @@ CFLAGS = -Wall -Wextra -g -O0
 #-pedantic-errors
 #-ansi
 CPPFLAGS = -DVERSION=$(VERSION) -DBUILD="\"$(BUILD)\"" -DDEBUG=$(SET_DEBUG) -DITER=$(MAX_ITERATION) -DGIF=$(DO_GIF)
-LDLIBS = -Wl, -lpthread -lm -lgmp
 
 %.x : %.c $(obj)
-	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDLIBS) $^ -o $@ 2>&1 | tee errors.err
+	$(CC) $(CFLAGS) $(CPPFLAGS)  $^ -o $@ 2>&1 | tee errors.err
 
 %.bfx : %.bf
 	    bf $^ -o $@ -i on -p both -r on -w on
