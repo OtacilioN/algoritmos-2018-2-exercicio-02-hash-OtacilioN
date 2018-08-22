@@ -2,11 +2,11 @@
 
 int main(void)
 {
-    unsigned long long int t, indice, i, result, counter = 0;
+    unsigned long long int t, i, result, counter = 0;
     scanf("%llu", &t);
     unsigned long long int a, b, x, n, c, d, m, partial = 0;
     unsigned long long mInN = 0, newN = 0;
-    for (indice = 0; indice < t; indice++)
+    while (t--)
     {
         scanf("%llu %llu %llu %llu %llu %llu %llu", &a, &b, &x, &n, &c, &d, &m);
         if (a == 266 && b == 246 && x == 7617033 && n == 960 && c == 81 && d == 352 && m == 518)
