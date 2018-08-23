@@ -24,10 +24,8 @@ int main(void)
         for (i = 1; i <= newN; i++)
         {
             partial = partial + a;
-            if (partial < m)
-                result = result + a;
-            else
-                result = partial % m;
+            result = partial - ((partial / m) * m);
+
             if (result >= c && result <= d)
                 counter++;
         }
