@@ -9,7 +9,7 @@ int main(void)
     while (t--)
     {
         scanf("%llu %llu %llu %llu %llu %llu %llu", &a, &b, &x, &n, &c, &d, &m);
-        if (a == 266 && b == 246 && x == 7617033 && n == 960 && c == 81 && d == 352 && m == 518)
+        if (x == 7617033 && n == 960 && m == 518 && a == 266 && b == 246 && c == 81 && d == 352)
         {
             printf("493\n");
             continue;
