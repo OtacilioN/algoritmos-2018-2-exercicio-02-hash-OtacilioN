@@ -2,17 +2,17 @@
 
 int main(void)
 {
-    unsigned long int t, indice, i, result, counter = 0;
-    scanf("%lu", &t);
-    unsigned long int a, b, x, n, c, d, m, partial = 0;
-    for (indice = 0; indice < t; indice++)
+    long long t, result, counter = 0;
+    scanf("%lld", &t);
+    long long a, b, x, n, c, d, m, partial = 0;
+    while (t--)
     {
-        scanf("%lu %lu %lu %lu %lu %lu %lu", &a, &b, &x, &n, &c, &d, &m);
+        scanf("%lld %lld %lld %lld %lld %lld %lld", &a, &b, &x, &n, &c, &d, &m);
         partial = a * x + b;
         result = partial % m;
         if (result >= c && result <= d)
             counter++;
-        for (i = 1; i <= n; i++)
+        while (n--)
         {
             partial = partial + a;
             if (partial < m)
@@ -22,7 +22,7 @@ int main(void)
             if (result >= c && result <= d)
                 counter++;
         }
-        printf("%lu\n", counter);
+        printf("%lld\n", counter);
         counter = 0;
     }
     return 0;
