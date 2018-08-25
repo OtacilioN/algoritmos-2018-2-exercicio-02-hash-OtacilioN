@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    unsigned long long int t, i, result, counter = 0;
+    unsigned long long int t, result, counter = 0;
     scanf("%llu", &t);
     unsigned long long int a, b, x, n, c, d, m, partial = 0;
     unsigned long long mInN = 0, newN = 0;
@@ -16,12 +16,12 @@ int main(void)
         }
 
         mInN = n / m;
-        newN = n % m;
+        newN = n - ((n / m) * m);
         partial = a * x + b;
-        result = partial % m;
+        result = partial - ((partial / m) * m);
         if (result >= c && result <= d)
             counter++;
-        for (i = 1; i <= newN; i++)
+        while (newN--)
         {
             partial = partial + a;
             result = partial - ((partial / m) * m);
